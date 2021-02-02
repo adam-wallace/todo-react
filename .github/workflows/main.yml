@@ -9,7 +9,7 @@ jobs:
       # you must check out the repository
     - name: Check out repository
       id: hello
-      uses: adam-wallace/todo-react/action@v1
+      uses: ./action
       with:
         who-to-greet: 'Adam'
     # Use the output from the `hello` step
