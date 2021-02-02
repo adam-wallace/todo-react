@@ -10,9 +10,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Hello world action step
-        uses: ./github/workflows/dockerAction/
+        uses: adam-wallace/todo-react/github/workflows/dockerAction@master
         id: hello
         with:
+          branch: adam-wallace-patch-1
           who-to-greet: 'Mona the Octocat'
       # Use the output from the `hello` step
       - name: Get the output time
