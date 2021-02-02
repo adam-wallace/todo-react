@@ -11,7 +11,7 @@ jobs:
        ref: adam-wallace-patch-1
     - name: Run action
       id: hello
-      uses: ./action
+      uses: ./action.yml
       with:
         who-to-greet: 'Adam'
     # Use the output from the `hello` step
