@@ -5,13 +5,15 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
+      # To use this repository's private action,
+      # you must check out the repository
     - name: Check out repository
-      uses: adam-wallace/todo-react
+      uses: adam-wallace/todo-react@v1
     - name: Use Hello world action step
       id: hello
       uses: ./action
       with:
-        who-to-greet: 'Adam
+        who-to-greet: 'Adam'
     # Use the output from the `hello` step
     - name: Get the output time
       run: echo "The time was ${{ steps.hello.outputs.time }}"
