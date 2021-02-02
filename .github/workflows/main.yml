@@ -7,13 +7,13 @@ jobs:
     steps:
       # To use this repository's private action,
       # you must check out the repository
-    - name: Check out repository
-      uses: actions/checkout@v2
-    - name: Use Hello world action step
-      id: hello
-      uses: ./action
-      with:
-        who-to-greet: 'Adam'
-    # Use the output from the `hello` step
-    - name: Get the output time
-      run: echo "The time was ${{ steps.hello.outputs.time }}"
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Hello world action step
+        uses: ./ # Uses an action in the root directory
+        id: hello
+        with:
+          who-to-greet: 'Mona the Octocat'
+      # Use the output from the `hello` step
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
