@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Hello script
         id: hello
-        uses: ./action
+      - uses: actions/checkout@v2
         with:
           who-to-greet: 'Adam'
     # Use the output from the `hello` step
