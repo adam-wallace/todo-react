@@ -4,7 +4,7 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      - uses: actions/checkout@v2
+      - uses: adam-wallace/todo-react@master
         name: Hello script
         id: hello
         with:
