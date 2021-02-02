@@ -5,10 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-    - uses: actions/checkout@master
-      name: Checkout
-    - uses: adam-wallace/todo-react/action@master
-      name: Test  
+      # To use this repository's private action,
+      # you must check out the repository
+    - name: Check out repository
+      id: hello
+      uses: adam-wallace/todo-react/action@v1
       with:
         who-to-greet: 'Adam'
     # Use the output from the `hello` step
