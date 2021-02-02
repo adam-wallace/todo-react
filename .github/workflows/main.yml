@@ -5,9 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      # To use this repository's private action,
-      # you must check out the repository
-    - name: Check out repository
+    - name: checkout
+    - uses: actions/checkout@v2
+      with:
+       ref: adam-wallace-patch-1
+    - name: Run action
       id: hello
       uses: ./action
       with:
