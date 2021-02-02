@@ -7,7 +7,9 @@ jobs:
     steps:
       # To use this repository's private action,
       # you must check out the repository
-    - name: Hello world action step
+    - name: Check out repository
+      uses: adam-wallace/todo-react@v1
+    - name: Use Hello world action step
       id: hello
       uses: ./action.yml
       with:
