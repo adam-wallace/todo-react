@@ -9,9 +9,6 @@ jobs:
       # you must check out the repository
     - name: Check out repository
       uses: adam-wallace/todo-react@v1
-    - name: Use Hello world action step
-      id: hello
-      uses: ./action
       with:
         who-to-greet: 'Adam'
     # Use the output from the `hello` step
