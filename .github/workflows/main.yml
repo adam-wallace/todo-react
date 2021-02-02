@@ -8,6 +8,7 @@ jobs:
       # To use this repository's private action,
       # you must check out the repository
     - name: Check out repository
+      id: hello
       uses: adam-wallace/todo-react@v1
       with:
         who-to-greet: 'Adam'
