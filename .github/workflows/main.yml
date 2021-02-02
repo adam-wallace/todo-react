@@ -6,12 +6,10 @@ jobs:
     steps:
       # To use this repository's private action,
       # you must check out the repository
-      - uses: actions/checkout
-        with:
-         ref: adam-wallace-patch-1
+      - uses: actions/checkout@adam-wallace-patch-1
       - name: hello script
         id: hello
-        uses: /action
+        uses: /action@adam-walace-patch-1
         with:
           who-to-greet: 'Adam'
     # Use the output from the `hello` step
